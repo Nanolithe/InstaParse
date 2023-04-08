@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ParseSwift
 
 // TODO: Import Parse Swift
 
@@ -28,7 +29,10 @@ class FeedViewController: UIViewController {
         tableView.dataSource = self
         tableView.allowsSelection = false
     }
-
+    @IBAction func logout(_ sender: Any) {
+        User.logout()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ParseSwift
 
 // TODO: Pt 1 - Import Parse Swift
 
@@ -46,6 +47,7 @@ class LoginViewController: UIViewController {
                 self?.showAlert(description: error.localizedDescription)
             }
         }
+        // This will also remove the session from the Keychain, log out of linked services and all future calls to current will return nil.
 
     }
 
